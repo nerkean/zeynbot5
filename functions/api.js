@@ -125,7 +125,7 @@ async function fetchUserGuildMember(userId) {
 }
 
 passport.use(new DiscordStrategy({
-    clientID: process.env.CLIENT_ID,
+    clientID: '1193621998505566350',
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: 'http://localhost:3000/auth/callback',
     scope: ['identify', 'guilds.members.read']
