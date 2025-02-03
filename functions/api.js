@@ -35,7 +35,7 @@ const client = new Client({
 });
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 8080;
 const LEADERBOARD_CACHE_TTL = 5 * 60;
 
 const corsOptions = {
