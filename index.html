@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <meta name="description" content="Официальный сайт бота для дискорд-сервера 'Банда Зейна'! Смотри свою статистику, следи за достижениями, будь первым в таблице лидеров и покупай крутые виртуальные товары за валюту сервера!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon3.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon2.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon1.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;600&display=swap"></noscript>
+    <script>
+        const { Chart, LineController, CategoryScale, LinearScale, PointElement, LineElement, Filler, Legend } = window.Chart;
+    </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div id="countdown">Обновление данных через: 5:00</div>
+    <a id="discord-server-link" href="https://discord.gg/bandazeyna" target="_blank">
+        <button class="discord-button">
+            <span>Дискорд сервер</span>
+        </button>
+    </a>
+    <div class="wrapper">
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="" class="profile-avatar" alt="Avatar">
+                <h1 class="profile-username"></h1>
+                <p class="profile-user-id"></p>
+                <p class="profile-user-position"></p>
+                <button class="discord-login" style="display: none;">
+                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-round-color-icon.png" alt="Discord Icon">
+                    Войти через Discord
+                </button>
+            </div>
+            <div class="profile-content">
+                <ul class="profile-tabs">
+                    <li class="profile-tab active" data-tab="stats">Статистика</li>
+                    <li class="profile-tab" data-tab="achievements">Достижения</li>
+                    <li class="profile-tab" data-tab="shop">Магазин</li>
+                    <li class="profile-tab" data-tab="info">Полезная информация</li>
+                </ul>
+                <div class="profile-tab-content" data-tab="stats">
+                    <div id="error-container"></div>
+                    <div class="profile-stats">
+                    </div>
+                    <div class="profile-staff-stats">
+                    </div>
+                </div>
+                <div class="profile-tab-content hidden" data-tab="achievements">
+                    <div class="profile-achievements">
+                    </div>
+                </div>
+                <div class="profile-tab-content hidden" data-tab="shop">
+                    <div class="shop-discount-info"></div>
+                    <div class="shop-items"></div>
+                </div>
+                <div class="profile-tab-content hidden" data-tab="info">
+                  <div class="profile-info">
+                    <h2>Natro Macro</h2>
+                    <p>Здесь вы можете скачать самую последнюю версию Natro Macro v1.0.0.3</p>
+                    <a href="/Natro.Macro.v1.0.0.3.zip" download>
+                      <button class="download-button">Скачать</button>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+            <div class="leaderboards-container">
+                <div class="leaderboard-messages">
+                    <h2>Лидеры по сообщениям</h2>
+                    <table class="leaderboard-table" id="messages-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Пользователь</th>
+                                <th>Сообщения</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-voice">
+                    <h2>Лидеры по голосу</h2>
+                    <table class="leaderboard-table" id="voice-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Пользователь</th>
+                                <th>Время</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-stars">
+                    <h2>Лидеры по звездам</h2>
+                    <table class="leaderboard-table" id="stars-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Пользователь</th>
+                                <th>Звёзды</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            <button class="logout-button" style="display: none;">Выход</button>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
