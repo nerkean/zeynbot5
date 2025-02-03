@@ -55,6 +55,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .then(() => console.log('💾 Подключено к MongoDB'))
     .catch(err => console.error('Ошибка подключения:', err));
 
+exports.handler = async function (event, context) {
     app.use(session({
         secret: process.env.SESSION_SECRET, 
         resave: false,
@@ -532,3 +533,4 @@ client.on('ready', () => {
 });
 
 client.login(process.env.TOKEN);
+}
