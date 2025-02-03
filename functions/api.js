@@ -39,7 +39,7 @@ const PORT = process.env.PORT || 10000;
 const LEADERBOARD_CACHE_TTL = 5 * 60;
 
 const corsOptions = {
-    origin: 'http://127.0.0.1:5500',
+    origin: 'https://bandazeyna.com',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     optionsSuccessStatus: 200,
